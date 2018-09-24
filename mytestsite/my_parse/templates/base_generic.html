@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<!-- IE/Chrome Compat -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<style type="text/css">
+.nobull{list-style-type: none; color: #002051}
+table { background-color: white; border: 2px solid green;}
+th {color: #002051; padding: 3px; border: 1px solid blue}
+td {color: #002051; padding: 3px; border: 1px solid blue }
+h1 {text-align:center; color: #002051 }
+p {text-align:center; color: #002051}
+body { background-color: #e5e8ed;}
+  <h1>Parsing Challenge</h1>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <!-- Add additional CSS in static file -->
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-2">
+      {% block sidebar %}
+        <a href="{% url 'index' %}"></a>
+	  {% endblock %}
+      </div>
+      <div class="col-sm-10 ">{% block content %}{% endblock %}</div>
+    </div>
+  </div>
+</body>
+</html>

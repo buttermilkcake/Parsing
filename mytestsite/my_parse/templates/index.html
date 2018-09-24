@@ -1,0 +1,41 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Parsing Challenge</h1>
+  <p>Welcome to the Parsing Challenge Messages Page</p>
+    
+  <table style="width:42%" align="center">
+    <tr>
+	  <th colspan="2">Parsing Message Counts</th>
+	</tr>  
+	<tr>	
+      <td align="right"><strong>Alpha Messages</strong></td>
+	  <td> {{ alpha|length }}</td> 
+    </tr>
+    <tr>
+	  <td align="right"><strong>Anomalous Messages</strong></td>
+	  <td>{{anomalous|length }}</td>
+	</tr>
+	<tr>
+	  <td align="right"><strong>Bravo Messages</strong></td>
+	  <td>{{ bravo|length }}</td>
+	</tr>
+	<tr>
+	  <td align="right"><strong>Charlie Messages</strong></td>
+	  <td>{{charlie|length }}</td>
+	</tr>
+	<tr>
+	  <td align="right"><strong>Delta Messages</strong></td>
+	  <td>{{ delta|length }} </td>
+	</tr>
+	<tr>
+	  <td align="right"><strong>Echo Messages</strong></td>
+	  <td>{{ echo|length }}</td>
+	</tr>
+	<tr>
+	  <td align="right"><strong>Total Messages</strong></td>
+	  <td>{{ total_all_messages|length }}</td>
+	</tr>  
+  </table>
+  
+{% endblock %}
